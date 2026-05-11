@@ -1,4 +1,5 @@
-* {
+body {
+	padding: 20px;
 	background-color: rgba(229, 110, 158, 0.459);
 	color: #fff;
 	font-family: monospace;
@@ -35,9 +36,24 @@ h2 {
 	display: block;
 }
 
+#experience ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#connect ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 40px 0 40px;
+}
+
 img.github_image,
 img.linkedin_image {
-	display: block;
+	display: inline-block;
 	width: 3em;
 	height: 3em;
 }
