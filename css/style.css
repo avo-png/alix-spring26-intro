@@ -1,43 +1,59 @@
-* {
-	background-color: rgba(229, 110, 158, 0.459);
-	color: #fff;
-	font-family: monospace;
+body {
+    padding: 20px;
+    background-color: rgba(229, 110, 158, 0.459);
+    color: #fff;
+    font-family: monospace;
 }
 
 section {
-	padding: 1px;
-	margin: 1px;
+    padding: 1px;
+    margin: 1px;
 }
 
 #connect {
-	text-align: center;
+    text-align: center;
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 h1 {
-	font-size: 30px;
-	color: blue;
-	font-weight: 800;
-	font-style: italic;
+    font-size: 30px;
+    color: blue;
+    font-weight: 800;
+    font-style: italic;
 }
 
 h2 {
-	font-size: 20px;
-	color: blue;
-	font-weight: 400;
+    font-size: 20px;
+    color: blue;
+    font-weight: 400;
 }
 
 #experience li,
 #connect li {
-	display: block;
+    display: block;
+}
+
+#experience ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#connect ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 40px 0 40px;
 }
 
 img.github_image,
 img.linkedin_image {
-	display: block;
-	width: 3em;
-	height: 3em;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
 }
