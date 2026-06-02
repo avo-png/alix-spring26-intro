@@ -1,7 +1,7 @@
 //add a footer
 const grabConnectSection = document.getElementById("messages");
 const addFooter = document.createElement("footer");
-messages.after(addFooter);
+grabConnectSection.after(addFooter);
 addFooter.setAttribute("id", "newFooter");
 
 // add the name and copyright
@@ -25,7 +25,7 @@ for (let i = 0; i < skills.length; i++) {
 }
 
 // Handle Message Form Submit
-const messageForm = document.getElementsByName("leave_message");
+const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener("submit", function (e) {
 	e.preventDefault();
 	const usernameInput = e.target.usersName.value;
@@ -54,5 +54,5 @@ messageForm.addEventListener("submit", function (e) {
 	newMessage.appendChild(removeButton);
 	messageList.append(newMessage);
 
-	document.getElementById("leave_message").reset();
+	messageForm.reset();
 });
