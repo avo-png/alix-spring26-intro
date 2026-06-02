@@ -1,8 +1,7 @@
 //add a footer
-const grabConnectSection = document.getElementById("connect");
+const grabConnectSection = document.getElementById("messages");
 const addFooter = document.createElement("footer");
-connect.after(addFooter);
-addFooter.append("Footer Placement");
+messages.after(addFooter);
 addFooter.setAttribute("id", "newFooter");
 
 // add the name and copyright
@@ -24,3 +23,36 @@ for (let i = 0; i < skills.length; i++) {
 	skill.textContent = skills[i];
 	skillsList.appendChild(skill);
 }
+
+// Handle Message Form Submit
+const messageForm = document.getElementsByName("leave_message");
+messageForm.addEventListener("submit", function (e) {
+	e.preventDefault();
+	const usernameInput = e.target.usersName.value;
+	const emailInput = e.target.usersEmail.value;
+	const messageInput = e.target.usersMessage.value;
+
+	console.log(usernameInput);
+	console.log(emailInput);
+	console.log(messageInput);
+
+	const messageSection = document.getElementById("messages");
+	const messageList = document.querySelector("#messages ul");
+	const newMessage = document.createElement("li");
+
+	newMessage.innerHTML = `<a href="mailto:${emailInput}">${usernameInput}</a> <span>${messageInput}</span>`;
+
+	const removeButton = document.createElement("button");
+	removeButton.innerText = "remove";
+	removeButton.setAttribute("type", "button");
+
+	removeButton.addEventListener("click", function () {
+		const entry = this.parentNode;
+		entry.remove();
+	});
+
+	newMessage.appendChild(removeButton);
+	messageList.append(newMessage);
+
+	document.getElementById("leave_message").reset();
+});
