@@ -1,6 +1,7 @@
 body {
 	padding: 20px;
-	background-color: rgba(229, 110, 158, 0.459);
+	/* background-color: rgba(222, 77, 135, 0.459); */
+	background-color: #5a0002;
 	color: #fff;
 	font-family: monospace;
 }
@@ -18,6 +19,11 @@ nav li {
 	flex: 1;
 }
 
+nav a {
+	color: white;
+	text-decoration-line: none;
+}
+
 section {
 	padding: 20px;
 	margin: 20px 0;
@@ -33,14 +39,14 @@ ul {
 
 h1 {
 	font-size: 30px;
-	color: blue;
+	color: #d98324;
 	font-weight: 800;
 	font-style: italic;
 }
 
 h2 {
 	font-size: 20px;
-	color: blue;
+	color: #d98324;
 	font-weight: 400;
 }
 
@@ -72,4 +78,30 @@ img.linkedin_image {
 	display: inline-block;
 	width: 3em;
 	height: 3em;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+}
+
+textarea#usersMessage {
+	height: 120px;
+	border-radius: 15px;
+}
+
+label,
+input {
+	padding: 5px;
+	border-radius: 15px;
+}
+
+button {
+	margin-top: 5px;
+	padding: 10px;
+	width: 100px;
+	background-color: #b4a6ab;
+	border: none;
+	border-radius: 16px;
 }
