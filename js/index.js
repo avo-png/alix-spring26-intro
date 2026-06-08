@@ -1,3 +1,13 @@
+// mobile nav
+function dropNavBar() {
+	var x = document.getElementById("myLinks");
+	if (x.style.display === "block") {
+		x.style.display = "none";
+	} else {
+		x.style.display = "block";
+	}
+}
+
 //add a footer
 const grabConnectSection = document.getElementById("messages");
 const addFooter = document.createElement("footer");
@@ -56,3 +66,31 @@ messageForm.addEventListener("submit", function (e) {
 
 	messageForm.reset();
 });
+
+// fetch repos
+fetch("https://api.github.com/users/avo-png/repos")
+	.then((response) => {
+		if (!response.ok) {
+			throw new Error("Request failed");
+		}
+		return response.json(); // Parse the response as JSON
+	})
+	.then((data) => {
+		const repositories = data;
+		console.log(data); // Do something with the data
+
+		const projectSection = document.getElementById("projects");
+		const projectList = document.querySelector("#projects ul");
+		for (let i = 0; i < repositories.length; i++) {
+			const project = document.createElement("li");
+			project.innerText = repositories[i].name;
+			projectList.appendChild(project);
+		}
+	})
+	.catch((error) => {
+		console.error("An error occurred:", error);
+	});
+
+//  Open your index.css file
+//  Add styling to your projects list, be sure to account for any changes you want in media queries
+//  STRETCH GOAL: Use flexbox (or grid) to style your list of repositories
