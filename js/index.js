@@ -1,10 +1,10 @@
 // mobile nav
 function dropNavBar() {
 	var x = document.getElementById("myLinks");
-	if (x.style.display === "block") {
+	if (x.style.display === "flex") {
 		x.style.display = "none";
 	} else {
-		x.style.display = "block";
+		x.style.display = "flex";
 	}
 }
 
@@ -90,7 +90,3 @@ fetch("https://api.github.com/users/avo-png/repos")
 	.catch((error) => {
 		console.error("An error occurred:", error);
 	});
-
-//  Open your index.css file
-//  Add styling to your projects list, be sure to account for any changes you want in media queries
-//  STRETCH GOAL: Use flexbox (or grid) to style your list of repositories
