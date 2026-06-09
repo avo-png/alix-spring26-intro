@@ -1,28 +1,36 @@
 body {
 	padding: 20px;
-	/* background-color: rgba(222, 77, 135, 0.459); */
-	background-color: #5a0002;
+	background-color: #917c78;
 	color: #fff;
 	font-family: monospace;
+	margin: 0 auto;
 }
 
-nav {
+/*full screen nav */
+.full_screen_nav {
 	padding: 1rem;
+	text-align: center;
 }
 
-nav ul {
+.full_screen_nav ul {
 	display: flex;
 	gap: 1rem;
 }
 
-nav li {
+.full_screen_nav li {
 	flex: 1;
 }
 
-nav a {
+.full_screen_nav a {
 	color: white;
 	text-decoration-line: none;
 }
+
+#about p {
+	text-align: center;
+}
+
+/* end fullscreen nav */
 
 section {
 	padding: 20px;
@@ -39,14 +47,14 @@ ul {
 
 h1 {
 	font-size: 30px;
-	color: #d98324;
+	color: #667761;
 	font-weight: 800;
 	font-style: italic;
 }
 
 h2 {
 	font-size: 20px;
-	color: #d98324;
+	color: #3d518c;
 	font-weight: 400;
 }
 
@@ -67,10 +75,13 @@ section,
 #connect ul {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 0 40px 0 40px;
 	gap: 1rem;
+}
+
+ul {
+	padding-inline-start: 0px;
 }
 
 img.github_image,
@@ -104,4 +115,63 @@ button {
 	background-color: #b4a6ab;
 	border: none;
 	border-radius: 16px;
+	width: auto;
+}
+
+/* Responsive Mode */
+@media (min-width: 577px) {
+	.topnav {
+		display: none;
+	}
+}
+
+@media (max-width: 576px) {
+	.main_logo {
+		display: none;
+	}
+
+	.full_screen_nav {
+		display: none;
+	}
+
+	.topnav {
+		overflow: hidden;
+		position: relative;
+		width: auto;
+	}
+
+	.topnav #myLinks {
+		display: none;
+	}
+
+	.topnav a {
+		color: #fff;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+		display: block;
+	}
+
+	/* Style the hamburger menu */
+	.topnav a.icon {
+		background: black;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 20px;
+	}
+
+	div#myLinks {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	input[type="checkbox"]:not(:checked) + ul {
+		display: none;
+	}
+
+	form {
+		width: auto;
+		max-width: 50vw;
+	}
 }

@@ -24,10 +24,15 @@
 			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
 	</head>
 	<body>
-		<h1>Alix Vo</h1>
-		<nav>
+		<h1 class="main_logo">Alix Vo</h1>
+		<!-- old nav -->
+		<nav class="full_screen_nav">
 			<ul>
 				<li><a href="#about">About</a></li>
 				<li><a href="#experience">Experience</a></li>
@@ -36,6 +41,37 @@
 				<li><a href="#connect">Connect</a></li>
 				<li><a href="#message">Message</a></li>
 			</ul>
+		</nav>
+		<nav
+			class="mobile topnav"
+			id="mobile_nav"
+		>
+			<h1>
+				<a
+					href="#home"
+					class="active"
+					>Alix Vo</a
+				>
+			</h1>
+			<!-- Navigation links (hidden by default) -->
+			<div id="myLinks">
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#connect">Connect</a></li>
+					<li><a href="#message">Message</a></li>
+				</ul>
+			</div>
+			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+			<a
+				href="javascript:void(0);"
+				class="icon"
+				onclick="dropNavBar()"
+			>
+				<i class="fa fa-bars"></i>
+			</a>
 		</nav>
 		<section id="about">
 			<h2>About</h2>
