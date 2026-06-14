@@ -4,12 +4,16 @@ body {
 	color: #fff;
 	font-family: monospace;
 	margin: 0 auto;
+	font-size: 1.1em;
 }
 
 /*full screen nav */
 .full_screen_nav {
 	padding: 1rem;
 	text-align: center;
+	position: sticky;
+	top: 0;
+	background-color: #917c78;
 }
 
 .full_screen_nav ul {
@@ -25,12 +29,15 @@ body {
 	color: white;
 	text-decoration-line: none;
 }
+/* end fullscreen nav */
+
+/* about, connect, experience, skills section */
 
 #about p {
 	text-align: center;
 }
 
-/* end fullscreen nav */
+
 
 section {
 	padding: 20px;
@@ -90,6 +97,8 @@ img.linkedin_image {
 	width: 3em;
 	height: 3em;
 }
+
+/* message section */
 
 form {
 	display: flex;
