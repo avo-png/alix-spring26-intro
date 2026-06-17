@@ -4,7 +4,7 @@ body {
 	color: #fff;
 	font-family: monospace;
 	margin: 0 auto;
-	font-size: 1.1em;
+	font-size: 13px;
 }
 
 /*full screen nav */
@@ -36,8 +36,6 @@ body {
 #about p {
 	text-align: center;
 }
-
-
 
 section {
 	padding: 20px;
