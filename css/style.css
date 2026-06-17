@@ -37,8 +37,6 @@ body {
 	text-align: center;
 }
 
-
-
 section {
 	padding: 20px;
 	margin: 20px 0;
@@ -107,8 +105,9 @@ form {
 }
 
 textarea#usersMessage {
-	height: 120px;
+	height: 100px;
 	border-radius: 15px;
+	padding: 10px;
 }
 
 label,
