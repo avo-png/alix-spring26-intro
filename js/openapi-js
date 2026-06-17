@@ -63,8 +63,9 @@ async function searchArtwork() {
 	}
 
 	const results = await searchForArtwork(term);
+	const randomResult = results[Math.floor(Math.random() * results.length)];
+	const artwork = await getArtworkDetails(randomResult.id);
 
-	const artwork = await getArtworkDetails(results[0].id);
 	displayArtwork(artwork);
 }
 
